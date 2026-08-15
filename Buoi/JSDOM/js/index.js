@@ -18,3 +18,11 @@ document.querySelector("p.text").style.color = "red"
 document.querySelector("p.text").style.backgorund = "black"
 //text-align trong JS DOM -> textAlign
 document.querySelector("p.text").style.textAlign = "center"
+
+// Atribute
+// Đổi đường dẫn hình ảnh
+// scr là thuộc tính của thẻ img
+let img = document.querySelector("img")
+
+console.log(img.src)
+img.src = "https://www.in.pro.vn/wp-content/uploads/2025/01/hinh-nen-manchester-united-voi-cup-vo-dich-the-hien-thanh-tich-cua-mu.webp"
