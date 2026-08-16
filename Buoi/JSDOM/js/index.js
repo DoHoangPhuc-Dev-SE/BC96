@@ -26,3 +26,19 @@ let img = document.querySelector("img")
 
 console.log(img.src)
 img.src = "https://www.in.pro.vn/wp-content/uploads/2025/01/hinh-nen-manchester-united-voi-cup-vo-dich-the-hien-thanh-tich-cua-mu.webp"
+
+// Thay đổi href của thẻ a
+
+document.querySelector("a").href = "https://github.com/DoHoangPhuc-Dev-SE"
+
+//  Đổi class
+let tagP = document.querySelector(".doi-class p")
+console.log(tagP.className)
+tagP.className = "Hihi"
+
+// Thêm class
+console.log(tagP.classList)
+tagP.classList.add("Hihi")
+
+// Bỏ class
+tagP.classList.remove("p5")
