@@ -28,7 +28,6 @@ console.log(img.src)
 img.src = "https://www.in.pro.vn/wp-content/uploads/2025/01/hinh-nen-manchester-united-voi-cup-vo-dich-the-hien-thanh-tich-cua-mu.webp"
 
 // Thay đổi href của thẻ a
-
 document.querySelector("a").href = "https://github.com/DoHoangPhuc-Dev-SE"
 
 //  Đổi class
@@ -42,3 +41,20 @@ tagP.classList.add("Hihi")
 
 // Bỏ class
 tagP.classList.remove("p5")
+
+// querySelector all
+// document.querySelectorAll("h1")
+// - h1
+// - h1
+
+// toggle
+let btn = document.querySelector(".change-theme")
+btn.onclick = function() {
+    // Test có ăn JS ko
+    console.log("Click button")
+    document.querySelector("body").classList.toggle("dark");
+}
+
+
+
+// Dự kiện
