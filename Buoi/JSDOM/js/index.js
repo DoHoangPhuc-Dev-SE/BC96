@@ -15,7 +15,7 @@ document.querySelector("h1").innerHTML = "<i>Hello Sumoi</i>"
 document.querySelector("p.text").innerText = "BC96 - JS DOM"
 
 document.querySelector("p.text").style.color = "red"
-document.querySelector("p.text").style.backgorund = "black"
+document.querySelector("p.text").style.background = "black"
 //text-align trong JS DOM -> textAlign
 document.querySelector("p.text").style.textAlign = "center"
 
@@ -58,3 +58,12 @@ btn.onclick = function() {
 
 
 // Dự kiện
+
+// Onclick
+// Đổi tên hình nghề nghiệp
+document.querySelector("#card1 button").onclick = function() {
+    // tên
+    document.querySelector("#card1 h4").innerText = "Le B"
+    document.querySelector("#card1 p").innerText = "Tester"
+    document.querySelector("#card1 img").src = "https://i.pravatar.cc/150?img=2"
+}
