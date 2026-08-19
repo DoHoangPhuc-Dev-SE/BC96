@@ -57,7 +57,7 @@ btn.onclick = function() {
 
 
 
-// Dự kiện
+// Sự kiện
 
 // Onclick
 // Đổi tên hình nghề nghiệp
@@ -66,4 +66,23 @@ document.querySelector("#card1 button").onclick = function() {
     document.querySelector("#card1 h4").innerText = "Le B"
     document.querySelector("#card1 p").innerText = "Tester"
     document.querySelector("#card1 img").src = "https://i.pravatar.cc/150?img=2"
+}
+
+
+document.querySelector("#submit-email").onclick = function() {
+    // lấy ND trong input
+    console.log(document.querySelector("#email").value)
+    let value = document.querySelector("#email").value
+    document.querySelector(".ket-qua-email").innerText = value
+}
+
+document.querySelector("#btn-bt1").onclick = function() {
+    // Lấy ra value của 3 thk input
+    let fullName = document.getElementById("fullName").value
+    let email = document.getElementById("email").value
+    let phone = document.getElementById("phone").value
+    // Hiển thị ra màn hình
+    document.getElementById("showName").innerText = fullName
+    document.getElementById("showEmail").innerText = email
+    document.getElementById("showPhone").innerText = phone
 }

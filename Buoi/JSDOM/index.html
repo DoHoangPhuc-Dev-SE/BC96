@@ -20,7 +20,7 @@
         <link rel="stylesheet" href="./css/index.css">
     </head>
 
-    <body>
+    <body class="container">
        <h1>Hello</h1>
        <p class="text">BC96</p>
 
@@ -49,6 +49,115 @@
                 <button class="btn btn-info">Next</button>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-6">
+                <div class="mb-3 w-25 py-5">
+                <label for="" class="form-label">Email</label>
+                <input
+                    type="email"
+                    class="form-control"
+                    name=""
+                    id="email"
+                    aria-describedby="emailHelpId"
+                    placeholder="abc@mail.com"
+                />
+                <button id="submit-email" class="btn btn-primary mt-5">Submit</button>
+            </div>
+            </div>
+            <div class="col-6">
+                <h1>Kết quả nhập form</h1>
+                <p class="ket-qua-email"></p>
+            </div>
+        </div>
+      
+  
+        <!-- BT1 -->
+
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0">Thông tin người dùng</h4>
+            </div>
+
+            <div class="card-body">
+                <div class="row">
+
+                    <!-- Cột trái -->
+                    <div class="col-md-6 border-end">
+
+                        <h5 class="mb-4">Nhập thông tin</h5>
+
+                        <div class="mb-3">
+                            <label class="form-label">Họ và tên</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="fullName"
+                                placeholder="Nhập họ và tên">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="email"
+                                placeholder="Nhập email">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Số điện thoại</label>
+                            <input
+                                type="tel"
+                                class="form-control"
+                                id="phone"
+                                placeholder="Nhập số điện thoại">
+                        </div>
+
+                        <button id="btn-bt1" class="btn btn-primary">
+                            Lưu thông tin
+                        </button>
+
+                    </div>
+
+                    <!-- Cột phải -->
+                    <div class="col-md-6">
+
+                        <h5 class="mb-4">Thông tin vừa nhập</h5>
+
+                        <div class="card bg-light">
+                            <div class="card-body">
+
+                                <p>
+                                    <strong>Họ và tên:</strong><br>
+                                    <span id="showName">Chưa nhập</span>
+                                </p>
+
+                                <hr>
+
+                                <p>
+                                    <strong>Email:</strong><br>
+                                    <span id="showEmail">Chưa nhập</span>
+                                </p>
+
+                                <hr>
+
+                                <p>
+                                    <strong>Số điện thoại:</strong><br>
+                                    <span id="showPhone">Chưa nhập</span>
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    
+        
 
         <!-- Bootstrap JavaScript Bundle (includes Popper) -->
         <script
