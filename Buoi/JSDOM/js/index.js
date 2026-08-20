@@ -86,3 +86,9 @@ document.querySelector("#btn-bt1").onclick = function() {
     document.getElementById("showEmail").innerText = email
     document.getElementById("showPhone").innerText = phone
 }
+
+// Hiện mật khẩu
+
+document.querySelector("#btn-bt2").onclick = function() {
+    document.getElementById("password").type = "Text";
+}
