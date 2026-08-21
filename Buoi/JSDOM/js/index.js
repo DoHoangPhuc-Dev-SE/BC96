@@ -92,3 +92,17 @@ document.querySelector("#btn-bt1").onclick = function() {
 document.querySelector("#btn-bt2").onclick = function() {
     document.getElementById("password").type = "Text";
 }
+
+// BT3
+document.querySelector("#btn-bt3").onclick = function() {
+    // Lấy option dạng đc chọn
+    console.log("Thành phố : ",document.getElementById("city").value)
+    // Radio 
+    console.log(document.querySelector("input[name=gender]:checked").value)
+    // ra value của input
+    //Checkbox
+    console.log(document.getElementById("agree").checked)
+    // true false
+    // Switch bản chất cx là checkbox
+    console.log(document.getElementById("darkMode").checked)
+}   
