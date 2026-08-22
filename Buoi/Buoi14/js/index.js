@@ -67,16 +67,54 @@ console.log(true || false) //  ==> true
 document.querySelector("#checkAge").onclick = function() {
     // lấy giá trị từ input
     let age = document.querySelector("#age").value
+    let DomKq = document.querySelector("#result1")
     let kq = ""
     // kiểm tra
     console.log(age >= 18) // lớn hơn || = 18
     if(age >= 18){ 
+        // chỉnh class alert alert-success
         kq = "Đủ tuổi lái xe máy > 50cc"
+        DomKq.className = "alert alert-success mt-3";
     }
     else{
+        // chỉnh class alert-danger
        kq = "Ko đủ tuổi lái " 
+       DomKq.className = "alert alert-danger mt-3";
     } 
-    document.querySelector("#result1").innerText = kq
+    
     // output
+    DomKq.innerText = kq
+}
+
+    // if else mở rộng
+
+    // nhập điểm Toán , lý hoá , => tính dtb
+// Xếp loại => giỏi(>=8) khá(>=7) tb(>=5) yếu(<5)
+
+document.querySelector("#check2").onclick = function() {
+    let domKq = document.querySelector("#result2")
+
+    // input: dt , dl , dh
+    let dt = document.querySelector("#dtoan").value
+    let dl = document.querySelector("#dly").value
+    let dh = document.querySelector("#dhoa").value
+
+    // process: tính dtb , xếp loại tương ứng...
+    let dtb = (Number(dt) + Number(dl) + Number(dh)) / 3;
+
+    if(dtb >= 8){
+    kq = "giỏi"
+    }
+    else if(dtb >= 7){
+        kq = "Khá"
+    }
+    else if(dtb >= 5){
+        kq = "trung bình"
+    }
+    else{
+        kq = "yếu"
+    }
+    // output: xep loai
+    domKq.innerText = kq
 
 }
