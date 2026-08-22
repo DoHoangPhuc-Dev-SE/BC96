@@ -118,3 +118,24 @@ document.querySelector("#check2").onclick = function() {
     domKq.innerText = kq
 
 }
+
+//Bài Tập : Xét thưởng nhân viên đạt đủ doanh số
+// Yêu cầu: Viết một chương trình để xét thưởng cho nhân viên. Nếu nhân viên
+// đạt mục tiêu bán hàng trên 100 sản phẩm, thưởng 10% tổng doanh số. Nếu
+// không, không có thưởng.
+                          // dùng oninput để nhập là ra đáp án ko cần ấn nút
+document.querySelector("#check3").onclick = function () {
+    let kq3 = document.querySelector("#result3")
+
+    let DS = document.querySelector("#doanhSo").value
+    let SL = document.querySelector("#soLuong").value
+    let kq = ""
+
+    if (SL >= 100) {
+        let hoaHong = Number(DS) * 10 / 100;
+        kq =`Hoa hồng là ${hoaHong.toLocaleString()}`
+    }
+    else kq = "Ko đạt KPI"
+
+    kq3.innerText = kq
+}
