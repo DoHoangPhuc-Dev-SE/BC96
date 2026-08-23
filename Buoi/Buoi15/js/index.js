@@ -36,3 +36,59 @@ let kq3 = ""
 kq3 = gender ? "Nam" : "Nữ"
 
 console.log("kq3 =", kq3)
+
+
+// if else if mở rộng
+//
+let dtb = 9.0;
+let xepLoai = dtb >=8 ? "Giỏi"
+               : dtb >=6.5 ? "Khá"
+               : dtb >=5 ? "Trung bình"
+               : "Yếu"
+
+
+// switch case
+document.querySelector("#inputThu").oninput = function () {
+    let so = document.querySelector("#inputThu").value;
+    let kq = "";
+
+switch (so){
+    // so == "1"
+    case "1":{
+        kq = "Chủ nhật"
+        break;
+    }
+    case "2":{
+        kq = "Thứ hai"
+        break;
+    }
+    case "3":{
+        kq = "Thứ ba"
+        break;
+    }
+    case "4":{
+        kq = "Thứ tư"
+        break;
+    }
+    case "5":{
+        kq = "Thứ năm"
+        break;
+    }
+    case "6":{
+        kq = "Thứ sáu"
+        break;
+    }
+    case "7":{
+        kq = "Thứ bảy"
+        break;
+    }
+    // tương ứng với else
+    default: {
+        kq = "không hợp lệ"
+        break
+    }
+}
+document.querySelector("#result1").innerText = kq
+}
+
+//DÙNG SWITCH CASE VỚI GIÁ TRỊ CỤ THỂ , IF ELSE DÀNH CHO KHOẢNG GIÁ TRỊ
