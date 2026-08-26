@@ -125,3 +125,18 @@ let tinhTong_cb = (a, b, fnc) =>{
 tinhTong_cb(3, 5 , hienThiKetQua)
 // tong = 8 => hienThiKetQua(8) =>
 tinhTong_cb(30, 5 , hienThiKetQuaDep)
+
+// kết hợp với DOM
+
+// document.querySelector("#btn").onclick = function() {
+
+// }
+
+// Bài tập
+// document.querySelector("#btn_id").onclick= function(){
+//    console.log("✅ label");
+// }
+
+let test = ()=>{
+    console.log("✅ hello button");
+}

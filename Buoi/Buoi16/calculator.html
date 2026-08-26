@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Máy tính Bootstrap 5</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        rel="stylesheet"
+    >
+
+    <style>
+        body {
+            min-height: 100vh;
+            background-color: #f2f2f2;
+        }
+
+        .calculator {
+            width: 400px;
+            max-width: 95%;
+            padding: 26px 20px 18px;
+            background-color: #505050;
+            border: 2px solid #333;
+            border-radius: 24px;
+            box-shadow:
+                inset 0 0 0 1px rgba(255, 255, 255, 0.25),
+                0 8px 18px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Ba nút góc trên */
+        .window-controls {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 4px 6px;
+        }
+
+        .window-dot {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+        }
+
+        .window-dot.red {
+            background-color: #ff5f57;
+        }
+
+        .window-dot.yellow {
+            background-color: #ffbd2e;
+        }
+
+        .window-dot.gray {
+            background-color: #696969;
+        }
+
+        /* Màn hình */
+        .calculator-screen {
+            height: 165px;
+            padding: 20px 4px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-end;
+            overflow: hidden;
+        }
+
+        .expression {
+            width: 100%;
+            min-height: 28px;
+            color: #cfcfcf;
+            font-size: 18px;
+            text-align: right;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .result {
+            width: 100%;
+            color: #ffffff;
+            font-size: 64px;
+            font-weight: 300;
+            line-height: 1;
+            text-align: right;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Các nút */
+        .calculator-button {
+            width: 80px;
+            height: 80px;
+            border: none;
+            border-radius: 50%;
+            color: #ffffff;
+            background-color: #888888;
+            font-size: 34px;
+            font-weight: 300;
+            transition: 0.15s;
+        }
+
+        .calculator-button:hover {
+            filter: brightness(1.12);
+        }
+
+        .calculator-button:active {
+            transform: scale(0.94);
+        }
+
+        .calculator-button.function-button {
+            background-color: #a5a5a5;
+        }
+
+        .calculator-button.operator-button {
+            background-color: #ff9500;
+        }
+
+        .calculator-button.active-operator {
+            color: #ff9500;
+            background-color: #ffffff;
+        }
+
+        .calculator-button i {
+            font-size: 30px;
+        }
+
+        @media (max-width: 450px) {
+            .calculator {
+                width: 350px;
+                padding-left: 14px;
+                padding-right: 14px;
+            }
+
+            .calculator-button {
+                width: 68px;
+                height: 68px;
+                font-size: 29px;
+            }
+
+            .calculator-screen {
+                height: 145px;
+            }
+
+            .result {
+                font-size: 54px;
+            }
+        }
+    </style>
+</head>
+
+<body class="d-flex justify-content-center align-items-center py-4">
+
+    <main class="calculator">
+        <!-- Thanh điều khiển -->
+        <div class="window-controls">
+            <span class="window-dot red"></span>
+            <span class="window-dot yellow"></span>
+            <span class="window-dot gray"></span>
+        </div>
+
+        <!-- Màn hình hiển thị -->
+        <section class="calculator-screen">
+            <div id="expression" class="expression"></div>
+            <div id="display" class="result"></div>
+        </section>
+
+        <!-- Bàn phím -->
+        <section class="container-fluid px-0">
+            <div class="row g-2 justify-content-center">
+
+                <!-- Hàng 1 -->
+                <div class="col-3 text-center">
+                    <button
+                        type="button"
+                        class="calculator-button function-button"
+                        aria-label="Xóa ký tự cuối"
+                    >
+                        <i class="bi bi-backspace"></i>
+                    </button>
+                </div>
+
+                <div class="col-3 text-center">
+                    <button
+                        type="button"
+                        class="calculator-button function-button"
+                    >
+                        +/−
+                    </button>
+                </div>
+
+                <div class="col-3 text-center">
+                    <button
+                        type="button"
+                        class="calculator-button function-button"
+                    >
+                        %
+                    </button>
+                </div>
+
+                <div class="col-3 text-center">
+                    <button
+                        type="button"
+                        class="calculator-button operator-button"
+                        data-operator="/"
+                        onclick="chooseOperator('/')"
+                    >
+                        ÷
+                    </button>
+                </div>
+
+                <!-- Hàng 2 -->
+                <div class="col-3 text-center">
+                    <button
+                        type="button"
+                        class="calculator-button"
+                        onclick="inputNumber('7')"
+                    >
+                        7
+                    </button>
+                </div>
+
+                <div class="col-3 text-center">
+                    <button
+                        type="button"
+                        class="calculator-button"
+                        onclick="inputNumber('8')"
+                    >
+                        8
+                    </button>
+                </div>
+
+                <div class="col-3 text-center">
+                    <button
+                        type="button"
+                        class="calculator-button"
+                        onclick="inputNumber('9')"
+                    >
+                        9
+                    </button>
+                </div>
+
+                <div class="col-3 text-center">
+                    <button
+                        type="button"
+                        class="calculator-button operator-button"
+                        data-operator="*"
+                        onclick="chooseOperator('*')"
+                    >
+                        ×
+                    </button>
+                </div>
+
+                <!-- Hàng 3 -->
+                <div class="col-3 text-center">
+                    <button
+                        type="button"
+                        class="calculator-button"
+                        onclick="inputNumber('4')"
+                    >
+                        4
+                    </button>
+                </div>
+
+                <div class="col-3 text-center">
+                    <button
+                        type="button"
+                        class="calculator-button"
+                        onclick="inputNumber('5')"
+                    >
+                        5
+                    </button>
+                </div>
+
+                <div class="col-3 text-center">
+                    <button
+                        type="button"
+                        class="calculator-button"
+                        onclick="inputNumber('6')"
+                    >
+                        6
+                    </button>
+                </div>
+
+                <div class="col-3 text-center">
+                    <button
+                        type="button"
+                        class="calculator-button operator-button"
+                        data-operator="-"
+                        onclick="chooseOperator('-')"
+                    >
+                        −
+                    </button>
+                </div>
+
+                <!-- Hàng 4 -->
+                <div class="col-3 text-center">
+                    <button
+                        type="button"
+                        class="calculator-button"
+                        onclick="inputNumber('1')"
+                    >
+                        1
+                    </button>
+                </div>
+
+                <div class="col-3 text-center">
+                    <button
+                        type="button"
+                        class="calculator-button"
+                        onclick="inputNumber('2')"
+                    >
+                        2
+                    </button>
+                </div>
+
+                <div class="col-3 text-center">
+                    <button
+                        type="button"
+                        class="calculator-button"
+                        onclick="inputNumber('3')"
+                    >
+                        3
+                    </button>
+                </div>
+
+                <div class="col-3 text-center">
+                    <button
+                        type="button"
+                        class="calculator-button operator-button"
+                        data-operator="+"
+                        onclick="chooseOperator('+')"
+                    >
+                        +
+                    </button>
+                </div>
+
+                <!-- Hàng 5 -->
+                <div class="col-3 text-center">
+                    <button
+                        type="button"
+                        class="calculator-button"
+                        onclick="clearCalculator()"
+                        aria-label="Xóa toàn bộ"
+                    >
+                        <i class="bi bi-calculator"></i>
+                    </button>
+                </div>
+
+                <div class="col-3 text-center">
+                    <button
+                        type="button"
+                        class="calculator-button"
+                        onclick="inputNumber('0')"
+                    >
+                        0
+                    </button>
+                </div>
+
+                <div class="col-3 text-center">
+                    <button
+                        type="button"
+                        class="calculator-button"
+                        onclick="inputDecimal()"
+                    >
+                        ,
+                    </button>
+                </div>
+
+                <div class="col-3 text-center">
+                    <button
+                        type="button"
+                        class="calculator-button operator-button"
+                        onclick="calculateResult()"
+                    >
+                        =
+                    </button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/calculator.js"></script>
+
+</body>
+</html>
