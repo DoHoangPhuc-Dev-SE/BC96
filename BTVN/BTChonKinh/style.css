@@ -1,0 +1,79 @@
+body {
+    background-image: url('./img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.model-box {
+    position: relative;
+    width: 250px;
+    display: inline-block;
+}
+
+
+.glasses-overlay {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    opacity: 0.85;
+    z-index: 2;
+}
+
+
+.glasses-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 127, 80, 0.85);
+    color: #fff;
+    padding: 8px;
+    text-align: left;
+    z-index: 3;
+}
+
+.glasses-item-btn {
+    width: 100px;
+    height: 60px;
+    padding: 6px 8px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+.glasses-item-btn:hover {
+    border-color: #f57c00;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.glasses-item-btn img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.glasses-grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    justify-items: center;
+}
+
+.glasses-item-btn img[src*="g1.jpg"],
+.glasses-item-btn img[src*="g2.jpg"],
+.glasses-item-btn img[src*="g7.jpg"] {
+    transform: scale(1.65);
+}
