@@ -17,10 +17,28 @@
 
     <body>
         <div class="container">
-            <div class="card">
+         
+
+              <div class="card">
                 <div class="card-body">
                     <h4 class="card-title">Bài tập Thêm Phần Tử Vào Mảng trong JavaScript</h4>
                     <div class="py-3">
+                        <div class="mb-3">
+                            <label for="" class="form-label">Loại</label>
+                            <select
+                                class="form-select form-select-lg"
+                                name=""
+                                id="txtType"
+                                onchange = "onChangeType()"
+                            >
+                                <option selected>Select one</option>
+                                <option value="1">Thêm vào đầu</option>
+                                <option value="2">Thêm vào Cuối</option>
+                                <option value="3">Thêm vị trí</option>
+                            </select>
+                        </div>
+                        
+                        
                         <div class="mb-3">
                             <label for="" class="form-label">Phần tử:</label>
                             <input
@@ -32,7 +50,8 @@
                                 placeholder="Nhập phần tử cần thêm"
                             />
                         </div>
-                        <div class="mb-3">
+                        <!-- INPUT VỊ TRÍ -->
+                        <div class="mb-3 d-none" id="divIndex">
                             <label for="" class="form-label">Vị trí:</label>
                             <input
                                 type="text"
@@ -44,15 +63,14 @@
                             />
                         </div>
                         <div class="d-flex gap-3">
-                            <button class="btn btn-outline-primary" onclick="themDau()">Thêm vào đầu</button>
-                            <button class="btn btn-outline-success" onclick="themCuoi()">Thêm vào cuối</button>
-                            <button class="btn btn-outline-info" onclick="themIndex()">Thêm vào vị trí</button>
+                            <button class="btn btn-outline-primary">Thêm</button>
+                            
                         </div>
                         <div class="" id="bt1Resuld"></div>
                         
                     </div>
                 </div>
-            </div> 
+            </div>
             
         </div>
         <!-- Bootstrap JavaScript Bundle (includes Popper) -->
