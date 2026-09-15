@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <title>Buoi 19</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS v5.3.8 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="card mt-4">
+        <div class="card-body">
+          <h4>Quản lý mảng số</h4>
+
+          <div class="mb-3">
+            <label class="form-label"> Nhập số </label>
+
+            <input type="number" class="form-control" id="txtNumber" />
+          </div>
+          <div class="alert alert-info" id="ds"></div>
+          <div class="alert alert-success" id="result"></div>
+
+          <div class="d-flex flex-wrap gap-2">
+            <button class="btn btn-primary" onclick="add()">Thêm số</button>
+
+            <button class="btn btn-success" onclick="sortAsc()">
+              Tăng dần
+            </button>
+
+            <button class="btn btn-warning" onclick="sortDesc()">
+              Giảm dần
+            </button>
+
+            <button class="btn btn-info">Đảo mảng</button>
+
+            <button class="btn btn-outline-warning">Xóa cuối</button>
+            <button class="btn btn-outline-success" onclick="totalSumEven()">
+              Tính tổng số chẵn
+            </button>
+            <button class="btn btn-outline-light">
+                Có số âm hay không
+            </button>
+            <button class="btn btn-outline-danger" 
+            onclick="boiCua3()">
+              ds số chia hết cho 3
+            </button>
+          </div>
+
+          <div id="numberResult" class="mt-3"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./js/arr_b19.js"></script>
+  </body>
+</html>
