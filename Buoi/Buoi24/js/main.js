@@ -26,3 +26,21 @@
  * 
  * 5xx: Lỗi do BE, server
  */
+
+//API GET:   https://6ab7e9f49b03155d080901a0.mockapi.io/User
+
+function getUserByFetch() {
+  //fetch dùng để gửi HTTP request
+  fetch("https://6ab7e9f49b03155d080901a0.mockapi.io/User")
+    // then : Xử lý khi Thành công
+  .then((response) => {
+      console.log("✅ Thành công");
+      response.json().then((dt) => {
+        console.log("✅ label", dt);
+      });
+    })
+    // catch : Xử lý khi Thất bại
+    .catch((err) => {
+      console.log("🙏 Thất bại");
+    });
+}
