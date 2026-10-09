@@ -1,0 +1,33 @@
+chạy các lệnh trong terminal
+- khởi tạo dự án + Vite
+    npm create vite@latest
+     - reactj, javascript, eslint, 
+    node module : tạo ra từ package.json bằng lệnh npm i
+- chạy dự án 
+    npm run dev
+
+- Component
+    - Quy tắc đặt tên : viết hoa chữ cái đầu 
+    Header, Footer
+    <Header/>
+- Data binding
+
+
+- State
+    - let : biến thông thường
+    biến thường đổi giá trị -> không làm thay đổi UI
+    - loại biến khác có thể lưu giá trị , hỗ trợ render UI, dùng được trong react => state
+flow state
+    user click 
+    ↓
+    onclick
+    ↓
+    decrease/ increase
+    ↓
+    setCount 
+    ↓
+    state thay đổi
+    ↓
+    component render lại
+    ↓
+    UI thay đổi
