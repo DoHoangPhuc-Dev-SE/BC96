@@ -21,8 +21,8 @@ return (
       <Footer />
       <Footer /> */}
       <DataBinding />
-      <EventDemo />
-      <StateDemo />
+      {/* <EventDemo /> */}
+      {/* <StateDemo /> */}
 </div>
 );
 }
