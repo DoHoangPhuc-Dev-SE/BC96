@@ -79,6 +79,7 @@ export default function EventDemo() {
         <option value="DN">DN</option>
         <option value="QN">QN</option>
         <option value="BD">BD</option>
+        <option value="BD">HL</option>
       </select>
 
       {/* Checkbox */}
