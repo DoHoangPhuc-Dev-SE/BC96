@@ -14,9 +14,11 @@ export default function ExerciseCart() {
     console.log("👉 product", product);
     setProductDetail(product);
   };
+
   //   ==============================
   //  Thêm giỏ hàng
   //   ==============================
+  
   const addToCart = (product) => {
     console.log("[CART] 👉 product", product);
     // kiểm tra xem có sp này trong giỏ hàng hay chưa
@@ -45,6 +47,7 @@ export default function ExerciseCart() {
   //   ==============================
   //  Tăng / giảm số lượng
   //   ==============================
+
   const changeQuantity = (maSP, value) => { 
     console.log("👉  maSP, value",  maSP, value);
     // tìm sp phù hợp => update số lượng
@@ -61,6 +64,7 @@ export default function ExerciseCart() {
   //   ==============================
   //  Giao diện
   //   ==============================
+
   return (
     <div className="container my-4">
       <h2 className="text-center mb-4">Bài tập giỏ hàng</h2>
@@ -70,7 +74,6 @@ export default function ExerciseCart() {
         viewDetail={viewDetail}
         addToCart={addToCart}
       />
-
       {/* Thông số kỹ thuật */}
       {productDetail && (
         <div className="mt-5">

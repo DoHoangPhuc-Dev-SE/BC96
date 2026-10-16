@@ -12,7 +12,6 @@ export default function Cart({ cartData, changeQuantity }) {
     }, 0);
   };
   return (
-    <>
       <div className="text-end mb-4">
         <button
           className="btn btn-sm btn-outline-danger"
