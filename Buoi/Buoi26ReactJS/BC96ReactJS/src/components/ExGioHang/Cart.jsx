@@ -6,12 +6,15 @@ export default function Cart({ cartData, changeQuantity }) {
       return total + item.soLuong;
     }, 0);
   };
+  
   const totalMoney = () => {
     return cartData.reduce((total, item) => {
       return total + item.soLuong * item.giaBan;
     }, 0);
   };
+
   return (
+    <>
       <div className="text-end mb-4">
         <button
           className="btn btn-sm btn-outline-danger"
@@ -21,6 +24,7 @@ export default function Cart({ cartData, changeQuantity }) {
           Giỏ hàng ({totalQuatity()})
         </button>
       </div>
+
       {/* bs5-modal-default  */}
       <div
         className="modal fade"
@@ -79,12 +83,14 @@ export default function Cart({ cartData, changeQuantity }) {
                         <td>{item.tenSP}</td>
 
                         <td>
-                          <button className="btn btn-primary btn-sm me-1"
-                            onClick={() => { changeQuantity(item.maSP,-1) }}
+                          <button 
+                            className="btn btn-primary btn-sm me-1"
+                            onClick={() => { changeQuantity(item.maSP, -1); }}
                           >-</button>
                           {item.soLuong}
-                          <button className=" ms-1 btn btn-primary btn-sm"
-                             onClick={() => { changeQuantity(item.maSP,1) }}
+                          <button 
+                            className="ms-1 btn btn-primary btn-sm"
+                            onClick={() => { changeQuantity(item.maSP, 1); }}
                           >+</button>
                         </td>
                         <td>{item.giaBan.toLocaleString()}</td>
