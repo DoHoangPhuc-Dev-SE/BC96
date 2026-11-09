@@ -30,7 +30,7 @@ return (
     {/* <DataBinding /> */}
     {/* <EventDemo /> */}
     {/* <StateDemo /> */}
-    {/* <PropsComponent/> */}
+    <PropsComponent/>
     {/* <ExerciseCart /> */}
     <ApiDemo />
     {/* <FormDemo /> */}
