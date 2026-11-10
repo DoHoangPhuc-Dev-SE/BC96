@@ -83,6 +83,7 @@ export default function ProductForm(props) {
                     name="name"
                     // onChange={formProduct.handleChange}
                     // value={formProduct.values.name}
+                    
                     {...formProduct.getFieldProps("name")}
                   />
                 </div>

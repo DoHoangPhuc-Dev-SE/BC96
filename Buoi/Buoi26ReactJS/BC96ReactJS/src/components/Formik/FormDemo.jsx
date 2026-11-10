@@ -38,7 +38,7 @@ export default function FormDemo() {
     */
   return (
     <div className="container mx-auto my-4">
-      <form action="submit" className="w-50" onSubmit={formLogin.handleSubmit}>
+      <form action="submit" className="w-50" onSubmit={formLogin.handleSubmit} onReset={formLogin.handleReset}>
         <h2 className="mb-4">Login</h2>
         <div className="mb-3">
           <label>Email</label>
@@ -74,6 +74,9 @@ export default function FormDemo() {
 
         <button type="submit" className="btn btn-primary w-100">
           Đăng nhập
+        </button>
+        <button type="reset" className="btn btn-info w-100">
+          Reset
         </button>
       </form>
     </div>

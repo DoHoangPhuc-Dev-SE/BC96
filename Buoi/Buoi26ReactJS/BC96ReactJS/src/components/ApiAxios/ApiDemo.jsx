@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import ProductForm from "./ProductForm";
+import Header from "../Layout/Header";
 
 export default function ApiDemo() {
   // khai báo 1 state để lưu ds sp lấy từ api
@@ -39,6 +40,8 @@ export default function ApiDemo() {
    
   return (
     <div className="container mx-auto">
+      {/*  Layout/Header */}
+      {/* <Header /> */}
         <div className="d-flex my-3">
             <button className="btn btn-outline-success" onClick={() => setCount(count + 1)}>Like</button>
             <span className="mx-3">{count}</span>
