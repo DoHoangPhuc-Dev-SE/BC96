@@ -1,0 +1,48 @@
+- Function component 
+    rfc / rafce
+    viết hoa chữ cái đầu
+- Data binding
+    const a = 10
+    <h1>{a}</h1>
+- handle event : onClick, onSubmit, onChange,...
+    onClick = {ten_funtion_khong_co_tham_so}
+    onClick = ()=> { ten_funtion_khong_co_so(thamso) }
+- Conditional rendering
+    - if else 
+    
+    - toán tử 3 ngôi VD: {userInfo ? "có":"không"}
+    - logic && {userInfo && "có"}
+
+-quản lý trạng thái với useState 
+    const [count, setCount] = useState(0)
+    - state thay đổi UI đổi
+    - state thay đổi => component render lại
+    - muốn thay đổi giá trị của state thì phải dùng hàm set_ của useState
+
+    4 bước 
+        - xây dựng UI
+        - Xác định kiểu dữ liệu state
+        - binding state lên UI
+        - xử lý thay đổi state 
+- Props truyền dự liệu
+    - truyền dữ liệu từ Compoent cha -> con 
+    - truyền biến , state, setState, funtion , component , ... 
+- lifting state up
+    - ui và event làm thay đổi UI nằm ở 2 component khác nhau 
+    => đưa state ra component cao hơn để cả 2 thằng trên đều dùng được 
+- axios - api
+    intercepter: cấu hình chung cho request và response
+- hook
+    - useState
+    - useEffect
+    - useDispatch (chưa học)
+    - useNavigate
+    - userSearchparram
+    - useParam
+- Zustand
+    quản lý state tập trung
+
+- thêm 1 api 
+    - thêm vào productAPI 
+    - gọi hàm trong zustand
+    - có thể quản lý state trong `zustand` luôn

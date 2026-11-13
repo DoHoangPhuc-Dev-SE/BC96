@@ -1,0 +1,21 @@
+.title{
+    color: black;
+    text-align: center;
+}
+.button{
+    padding: 10px;
+    color: red;
+    border: 1px red solid;
+    border-radius: 5px;
+}
+
+/* 
+css thường test.css thì dùng như bình thường 
+    import "./..."
+    classname="title"
+css module
+    import ten_tuy_y from "./...."
+    className = {ten_tuy_y.button}
+
+
+*/
